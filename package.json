@@ -1,0 +1,18 @@
+{
+  "name": "bundling",
+  "version": "1.0.0",
+  "description": "Bundling",
+  "scripts": {
+    "build0": "esbuild src/*.js --bundle --outdir=esBuildOutput",
+    "build1": "esbuild src/hello.js --bundle --outfile=out/out.js --bundle --minify --sourcemap --target=chrome58,firefox57,safari11,edge16",
+    "esbuild": "node esbuild.config.js",
+    "webpack": "webpack --config webpack.config.js"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^4.10.0",
+    "esbuild": "^0.15.13"
+  }
+}
