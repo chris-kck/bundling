@@ -1,0 +1,6 @@
+/.idea/
+/esBuildOutput/
+/webpackOutput/
+/node_modules/
+/dist/
+/.vscode/
