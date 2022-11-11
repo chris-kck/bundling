@@ -1,5 +1,5 @@
 require('esbuild').build({
-    entryPoints: ['src/hello.js', "src/world.ts"],
+    entryPoints: ['src/hello.js', "src/world.ts", "src/styles.css"],
     bundle: true,
     //outfile: 'esBuildOutput/bundle.js',
     outdir: 'esBuildOutput',
@@ -8,11 +8,12 @@ require('esbuild').build({
     target: 'es2015',
     loader: {
         '.js': 'jsx',
-        '.ts': 'ts'
+        '.ts': 'ts',
+        '.css': 'css'
     },
     define: {
         'process.env.NODE_ENV': '"development"'
     },
-    watch: true,
-    keepNames: false,
+    watch: false, // watch for changes to the filesystem and rebundle automatically
+    keepNames: false, // retains function names.
 }).catch(() => process.exit(1))
